@@ -1,0 +1,30 @@
+<%- include("header") -%>
+
+    <div id="heading">
+      <h1 class="name"><%= listName %></h1>
+      <h1>Today is <%= today %></h1>
+    </div>
+
+    <div class="box capitalize">
+      <div>
+        <% for (let i=0; i < newItems.length; i++){ %>
+        <div class="item">
+          <input type="checkbox" />
+          <p class="list-items">
+            <%= newItems[i] %>
+          </p>
+        </div>
+        <% } %>
+        <form class="item" action="/" method="POST">
+          <input
+            type="text"
+            placeholder="Add Item"
+            autocomplete="off"
+            name="item"
+          />
+          <button type="submit" name="list" value= <%= listName%>>+</button>
+        </form>
+      </div>
+    </div>
+  
+<%- include("footer") %>
