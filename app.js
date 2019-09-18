@@ -15,7 +15,7 @@ let day = date.getDate();
 
 
 app.get("/", (req, res) => {
-  res.render("list", { today: day, newItems: newItems, listName: "William" });
+  res.render("list", { today: day, newItems: newItems, listName: "Welcome" });
 });
 
 app.post("/", (req, res) => {
